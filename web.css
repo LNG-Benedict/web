@@ -54,20 +54,9 @@ button:active{
   transform: translateY(20px);
 }
 #judul{
-  width: 0;
   font-family: "Quicksand", sans-serif;
-  overflow: hidden;
   word-break: break-word;
   text-align: center;
-  animation: ketik 3s steps(32) forwards;
-}
-@keyframes ketik{
-  from{
-    width: 0%;
-  }
-  to{
-    width: 100%;
-  }
 }
 #app{
   flex: 1;
