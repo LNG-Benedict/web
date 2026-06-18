@@ -57,7 +57,8 @@ button:active{
   width: 0;
   font-family: "Quicksand", sans-serif;
   overflow: hidden;
-  white-space: nowrap;
+  word-break: break-word;
+  text-align: center;
   animation: ketik 3s steps(32) forwards;
 }
 @keyframes ketik{
