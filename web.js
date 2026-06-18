@@ -58,3 +58,12 @@ mulaiBtn.addEventListener("click", function () {
 
   }, 500);
 });
+
+
+selesai.addEventListener("click", function(){
+  const nomor = "6283838047138";
+  const pesan = "Sudah dibaca yaa....";
+
+  const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+
+  window.open(url, "_blank");
