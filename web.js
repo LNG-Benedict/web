@@ -23,6 +23,7 @@ mulaiBtn.addEventListener("click", function(){
 
       // 🎯 TYPING EFFECT
       const teks = "Selamat Ulang Tahun, Bang Ivan...🎉🎉";
+      judul.innerHTML = "";
       let i = 0;
 
       function ketik(){
