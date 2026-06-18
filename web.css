@@ -57,6 +57,7 @@ button:active{
 }
 #judul{
   width: 0;
+  font-family: "Quicksand", sans-serif;
   overflow: hidden;
   white-space: nowrap;
   animation: ketik 3s steps(32) forwards;
@@ -68,4 +69,10 @@ button:active{
   to{
     width: 100%;
   }
+}
+#footer{
+  margin-top: 20px;
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
 }
