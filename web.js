@@ -6,6 +6,23 @@ const judul = document.getElementById("judul");
 const card = document.querySelector(".card");
 const selesai = document.getElementById("selesai");
 
+function mulaiTyping(){
+  const teks = "Selamat Ulang Tahun, Bang Ivan...🎉🎉";
+  judul.innerHTML = "";
+
+  let i = 0;
+
+  function ketik(){
+    if(i < teks.length){
+      judul.innerHTML += teks.charAt(i);
+      i++;
+      setTimeout(ketik, 70);
+    }
+  }
+
+  setTimeout(ketik, 200);
+}
+
 mulaiBtn.addEventListener("click", function(){
 
   halamanAwal.style.opacity = "0";
@@ -21,26 +38,19 @@ mulaiBtn.addEventListener("click", function(){
       card.style.opacity = "1";
       card.style.transform = "translateY(0)";
 
-      // 🎯 TYPING EFFECT
-      const teks = "Selamat Ulang Tahun, Bang Ivan...🎉🎉";
-      judul.innerHTML = "";
-      let i = 0;
+      // 🔥 1. TYPOING DIPISAH (AMAN)
+      mulaiTyping();
 
-      function ketik(){
-        if(i < teks.length){
-          judul.innerHTML += teks.charAt(i);
-          i++;
-          setTimeout(ketik, 70);
-        }
-      }
-
-      setTimeout(ketik, 300);
+      // 🔥 2. MUSIK DIPISAH (AMAN)
+      setTimeout(function(){
+        musik.currentTime = 79.92;
+        musik.play();
+      }, 100);
 
     }, 500);
 
-    musik.play();
-
   }, 500);
+
 });
 
 selesai.addEventListener("click", function(){
