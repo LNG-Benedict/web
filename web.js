@@ -18,7 +18,15 @@ mulaiBtn.addEventListener("click", function(){
       card.style.opacity = "1";
       card.style.transform = "translateY(0)";
     }, 500);
-    musik.play()
+    musik.currentTime = 79.92;
+    musik.play();
+    const batas = 166.64;
+    const cek = setInterval(function(){
+      if(musik.currentTime >= batas){
+        musik.pause();
+        clearInterval(cek);
+      }
+    }, 200);
   }, 500);
 });
 
