@@ -43,6 +43,18 @@ mulaiBtn.addEventListener("click", function () {
       musik.play().catch(function (err) {
         console.log("Audio error:", err);
       });
+
     }, 500);
+
   }, 500);
+});
+
+selesai.addEventListener("click", function () {
+  const pesan =
+    "Selamat ulang tahun bang... semoga hari ini, menjadi hari yang menyenangkan...🎉🎉";
+
+  window.open(
+    "https://wa.me/6283838047138?text=" + encodeURIComponent(pesan),
+    "_blank"
+  );
 });
