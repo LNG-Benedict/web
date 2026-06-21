@@ -67,3 +67,4 @@ selesai.addEventListener("click", function(){
   const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
 
   window.open(url, "_blank");
+});   
