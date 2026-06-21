@@ -8,6 +8,7 @@ const selesai = document.getElementById("selesai");
 
 function mulaiTyping() {
   const teks = "Selamat Ulang Tahun, Bang Ivan...🎉🎉";
+
   judul.innerHTML = "";
 
   let i = 0;
@@ -24,47 +25,24 @@ function mulaiTyping() {
 }
 
 mulaiBtn.addEventListener("click", function () {
-
-  // 1. transisi halaman awal
   halamanAwal.style.opacity = "0";
 
   setTimeout(function () {
     halamanAwal.style.display = "none";
-
-    // 2. tampilkan halaman utama
     halamanUtama.style.display = "flex";
 
     setTimeout(function () {
       halamanUtama.style.visibility = "visible";
       halamanUtama.style.opacity = "1";
 
-      // 3. animasi card
       card.style.opacity = "1";
       card.style.transform = "translateY(0)";
 
-      // 4. typing effect
       mulaiTyping();
 
-      // 5. musik (diputar setelah user klik)
-      const playPromise = musik.play();
-
-      if (playPromise !== undefined) {
-        playPromise.catch(function (err) {
-          console.log("Audio blocked:", err);
-        });
-      }
-
+      musik.play().catch(function (err) {
+        console.log("Audio error:", err);
+      });
     }, 500);
-
   }, 500);
 });
-
-
-selesai.addEventListener("click", function(){
-  const nomor = "6283838047138";
-  const pesan = "Sudah dibaca yaa....";
-
-  const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
-
-  window.open(url, "_blank");
-});   
